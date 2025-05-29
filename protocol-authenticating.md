@@ -29,7 +29,7 @@ List<int> uuidToBytes(String uuid) {
   return [for (int i = 0; i < cleanedUuid.length; i += 2) int.parse(cleanedUuid.substring(i, i + 2), radix: 16)];
 }
 
-List<int> authPacket = uuidToBytes('8dffdfbd-40cc-4b86-8df8-1d48463b20F1');
+final authPacket = uuidToBytes('8dffdfbd-40cc-4b86-8df8-1d48463b20F1');
 ```
 
 **Note**

@@ -2,11 +2,11 @@
 
 ## Writing Status Packets
 
-Status packets do not contain JSON data or CRC bytes, only the header byte. The firmware expects the singular byte.
+Status packets do not contain JSON data or CRC bytes, only the header byte. The Bluetooth device expects a singular byte.
 
 ## ACK/NAK Status Packet
 
-The ACK/NAK status packet tells the Bluetooth device if it successfully transmitted the packet or not. This should be send whenever a data packet is received from the Bluetooth device. A NAK should be sent if the packet is malformed; otherwise, the ACK should be sent.
+The ACK/NAK status packet tells the Bluetooth device if it successfully transmitted the packet or not. This should be sent whenever a data packet is received from the Bluetooth device. A NAK should be sent if the packet is malformed; otherwise, the ACK should be sent.
 
 ```dart
 enum CsBleProcessorAckNakType {
@@ -60,7 +60,7 @@ static int createKeepAliveHeader(CsBleProcessorKeepAliveType type) =>
 
 ## Timeout Status Packet
 
-The timeout status packet is used by the Bluetooth device when it stops receiving keep-alive responses. It's like a last effort to try and keep the connection alive.
+The timeout status packet is used by the Bluetooth device when it stops receiving keep-alive responses. It's a last attempt to try and keep the connection alive.
 
 ```dart
 enum CsBleProcessorTimeoutType {

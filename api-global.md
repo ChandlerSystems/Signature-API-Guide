@@ -1,15 +1,15 @@
 # Global API
 
-| Name                    | Key   | Type    | Unit    | Min | Max | Access      | Description                                                        |
-|:------------------------|-------|---------|:--------|-----|-----|-------------|:-------------------------------------------------------------------|
-| Valve Status            | gvs   | Integer | -       | -   | -   | Write-Only  | Current valve status bits.                                         |
-| Valve Error             | gve   | Integer | -       | -   | -   | Write-Only  | Current valve error.                                               |
-| Present Flow            | gpf   | Integer | GPM     | -   | -   | Write-Only  | Current flow in GPM in hundredths.                                 |
-| Regen Active            | gra   | Boolean | -       | 0   | 1   | Write-Only  | Flag to indicate whether or not there is an active regeneration.   |
-| Regen State             | grs   | Integer | -       | 0   | 13  | Write-Only  | The current regeneration state.                                    |
-| Regen Now               | grn   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to start a regeneration immediately.        |
-| Regen Later             | grl   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to start a regeneration at the next time.   |
-| Find Home               | gfh   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to find home. Ensures valve is at home slot.|
+| Name                    | Key   | Type    | Unit    | Min | Max | Access      | Description                                                             |
+|:------------------------|-------|---------|:--------|-----|-----|-------------|:------------------------------------------------------------------------|
+| Valve Status            | gvs   | Integer | -       | -   | -   | Write-Only  | Current valve status bits.                                              |
+| Valve Error             | gve   | Integer | -       | -   | -   | Write-Only  | Current valve error.                                                    |
+| Present Flow            | gpf   | Integer | GPM     | -   | -   | Write-Only  | Current flow in GPM in hundredths.                                      |
+| Regen Active            | gra   | Boolean | -       | 0   | 1   | Write-Only  | Flag to indicate whether or not there is an active regeneration.        |
+| Regen State             | grs   | Integer | -       | 0   | 13  | Write-Only  | The current regeneration state.                                         |
+| Regen Now               | grn   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to start a regeneration immediately.             |
+| Regen Later             | grl   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to start a regeneration at the next time.        |
+| Find Home               | gfh   | Boolean | -       | 0   | 1   | Read-Only   | Flag to tell the valve to find home. Ensures valve is at the home slot. |
 
 ## Valve Status
 
