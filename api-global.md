@@ -28,7 +28,7 @@ The valve status is a single value that has certain bits toggled depending on th
 ```
 
 **NOTE**
-The water state and bypass state or for future use when the new CS/Commercial boards are designed as those boards allow water shutoff and bypass.
+Not all valve types can shut off and bypass.  The water state and bypass state are for future use when the new CS/Commercial boards are designed as those boards allow water shutoff and bypass.
 
 ## Error State Values
 

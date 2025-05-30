@@ -10,10 +10,13 @@
         "asrc",
         "asrg",
         "astg",
+        "Backwashing",
         "CCITT",
         "dcdo",
         "dlsa",
         "dlsb",
+        "dlvs",
+        "dlvt",
         "dpfd",
         "drcp",
         "dria",
@@ -23,6 +26,7 @@
         "drtt",
         "dtgr",
         "dwau",
+        "Hydrox",
         "Regen",
         "shdo",
         "shdr",
@@ -33,6 +37,7 @@
         "shrc",
         "shrr",
         "sublist",
+        "Timeclock",
         "TWEDO"
     ]
 }
