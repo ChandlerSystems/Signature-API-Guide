@@ -1,5 +1,6 @@
 # Important Notes
 
+- :warning: You must be running firmware C6.13+. It is not supported on any other firmware versions.
 - The Bluetooth device was designed to only send data packets as the data changes on the device. If there are no current changes, then the valve will only send keep-alive status packets, to which you must respond.
 - The Bluetooth device may stop responding to packets or connections during development. If this happens, just reboot the Bluetooth device to restore functionality.
 - There are some values transmitted from the Bluetooth device for keys not documented in this guide. Those values are unused and should be ignored.
