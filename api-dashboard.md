@@ -22,8 +22,8 @@
 | Regen Soak Timer                   | drst | Integer | -       | -   | -    | Write-Only  | The amount of time remaining, in minutes, for brine soak.         |
 | Prefill Enabled                    | dpe  | Integer | -       | 0   | 1    | Read/Write  | Flag to indicate whether or not brine pre-fill is enabled or not. |
 | Prefill Duration                   | dpd  | Integer | Hours   | 1   | 4    | Read/Write  | Brine pre-fill duration.                                          |
-| Brine Tank - Total Salt Pounds     | dpd  | Integer | Pounds  | 0   | -    | Write-Only  | The total pounds of salt that the configured brine tank can hold. |
-| Brine Tank - Remaining Salt Pounds | dpd  | Integer | Pounds  | 0   | -    | Read/Write  | The current remaining salt, in pounds, that is left in the tank.  |
+| Brine Tank - Total Salt Pounds     | dbts | Integer | Pounds  | 0   | -    | Write-Only  | The total pounds of salt that the configured brine tank can hold. |
+| Brine Tank - Remaining Salt Pounds | dbtr | Integer | Pounds  | 0   | -    | Read/Write  | The current remaining salt, in pounds, that is left in the tank.  |
 
 ## Battery Level
 
