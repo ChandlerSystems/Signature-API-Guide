@@ -12,7 +12,7 @@ The ID packet puts the Bluetooth device into a state where it's expecting an aut
 ```dart
 // Note that this is a status packet, so no header or CRC is expected
 
-List<int> idPacket() => [ 0x3A ];
+List<int> idPacket() => [ 0xEA ];
 ```
 
 ## Authentication Token Packet
