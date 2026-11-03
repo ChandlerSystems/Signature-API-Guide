@@ -11,17 +11,20 @@
 | Total Gallons Resettable | shgr | Integer | Gallons | -   | -    | Read/Write  | The total number of gallons that have flowed since the last reset.    |
 | Error Logs               | shel | Integer | -       | -   | -    | Write-Only  | A log of errors that have occurred (last 20 errors).                  |
 
-## Gallons Since Last Regen
+## Gallon Values
 
-The gallons since last regen value should be converted to a floating-point value and it's in hundredths.
+The gallons since last regen (`shgs`), total gallons (`shgt`) and total gallons resettable (`shgr`) values should be converted to floating-point values. How they're sent depends on the firmware version (see the firmware version in the [device list](api-device-list.md) section):
 
-## Total Gallons
+- **C6.19 and newer:** The values are sent as quarter gallon counts, so each value needs divided by 4.
+- **C6.18 and older:** The values are sent in hundredths, so each value needs divided by 100.
 
-The total gallons value should be converted to a floating-point value and it's in hundredths.
+```dart
+double gallons(int value) => firmwareVersion >= 619 ? value / 4.0 : value / 100.0;
 
-## Total Gallons Resettable
-
-The total gallons resettable value should be converted to a floating-point value and it's in hundredths.
+// Examples
+// C6.19: 4939 / 4 = 1,234.75 gallons
+// C6.18: 123475 / 100 = 1,234.75 gallons
+```
 
 ## Error Logs
 

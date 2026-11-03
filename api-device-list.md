@@ -2,16 +2,27 @@
 
 | Name                    | Key   | Type    | Unit    | Min | Max | Access      | Description                                                         |
 |:------------------------|-------|---------|:--------|-----|-----|-------------|:--------------------------------------------------------------------|
-| Serial Number A         | dlsa  | Integer | -       | -   | -   | Write-Only  | The first half of the serial number.                                |
-| Serial Number B         | dlsb  | Integer | -       | -   | -   | Write-Only  | The second half of the serial number.                               |
-| Firmware Version        | dlf   | Integer | -       | -   | -   | Write-Only  | The current firmware version.                                       |
-| Valve Type              | dlvt  | Integer | -       | -   | -   | Write-Only  | The current valve type.                                             |
+| Serial Number A         | gesa  | Integer | -       | -   | -   | Write-Only  | The first half of the serial number.                                |
+| Serial Number B         | gesb  | Integer | -       | -   | -   | Write-Only  | The second half of the serial number.                               |
+| Firmware Version        | gef   | Integer | -       | -   | -   | Write-Only  | The current firmware version.                                       |
+| Valve Type              | gedt  | Integer | -       | -   | -   | Write-Only  | The current valve type.                                             |
 | Valve Series            | dlvs  | Integer | -       | 2   | 6   | Write-Only  | The current valve series.                                           |
 | Regen Motor In Progress | dlr   | Boolean | -       | 0   | 1   | Write-Only  | Flag to indicate if the motor is moving to a regeneration position. |
 
+## Key Changes
+
+As of firmware C6.19, the serial number, firmware version and valve type keys have been renamed. Firmware C6.18 and older send the original keys, so a client that supports both should accept either key.
+
+| Name             | C6.19 and Newer | C6.18 and Older |
+|:-----------------|-----------------|-----------------|
+| Serial Number A  | gesa            | dlsa            |
+| Serial Number B  | gesb            | dlsb            |
+| Firmware Version | gef             | dlf             |
+| Valve Type       | gedt            | dlvt            |
+
 ## Serial Number Values
 
-The serial number is split into two `unsigned 32-bit` parts: `dlsa` (first half) and `dlsb` (second half). The serial number is concatenated displayed as a hexadecimal string; below is an example Dart code illustrating this.
+The serial number is split into two `unsigned 32-bit` parts: `gesa` (first half) and `gesb` (second half). The serial number is concatenated displayed as a hexadecimal string; below is an example Dart code illustrating this.
 
 ```dart
 String getSerialNumber() => '${serialNumberA.toRadixString(16)}${serialNumberB.toRadixString(16)}'.toUpperCase();
